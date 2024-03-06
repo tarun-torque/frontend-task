@@ -1,0 +1,230 @@
+ @font-face {
+    font-family: 'Gotham';
+    src: url(Font/gotham/GothamBold.ttf)  format('truetype');
+
+    font-family: 'Gotham-thin';
+    src:url(Font/gotham/Gotham-Thin.otf) format('opentype')
+} 
+
+
+body{
+    font-family:'Gotham',sans-serif ;
+}
+ .head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    
+} 
+
+.row{
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3vmax;
+}
+.imageText{
+  position: absolute;
+ bottom: -27%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color: white;
+ opacity: 0.7;
+ font-size:20px;
+ width: 100%;
+ height: 55%;
+ background-color: #634a4a;
+ font-family:'Gotham';
+ text-align: center;
+}
+
+.imageText4{
+  position: absolute;
+bottom: -50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color: white;
+ opacity: 0.7;
+ font-size:20px;
+ width: 100%;
+ height: 100%;
+ background-color: #634a4a;
+ font-family:'Gotham';
+ text-align: center;
+}
+
+
+
+
+.imageText p{
+  margin-top: 20%;
+  opacity: 1;
+}
+
+
+
+
+  .container{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+
+
+
+  .overlay{
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 0;
+    background-color: tomato;
+    
+  }
+
+
+
+.image{
+  transition: filter 0.3s ease;
+  
+}
+
+
+
+
+  .heading{
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 1.5vmax;
+    font-family: 'Gotham-thin' sans-serif;
+
+  }
+
+
+  .desc{
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-size: 1vmax;
+  
+  }
+
+
+  .cross{
+    width: 0;
+    height: 0;
+    bottom: 0;
+    background-color: tomato;
+    
+  }
+
+  .container:hover .cross{
+    width: 100%;
+    height: 90%;
+    opacity:0.9;
+  }
+  .container:hover .image {
+    filter: blur(5px); 
+}
+
+.container:hover .imageText {
+ display: none;
+}
+.container:hover .imageText4 {
+  display: none;
+ }
+ 
+
+
+
+
+
+
+
+
+/* css for responsiveness */
+
+@media screen and (min-width: 1089px) and (max-width: 1200px) {
+
+  .image{
+    width: 40vmax;
+  }
+  .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .heading{
+    font-size: 1.9vmax;
+  }
+  .desc{
+    font-size: 1.5vmax;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1089px) {
+
+   .image{
+    width: 45vmax;
+  } 
+  
+  .heading{
+    font-family: 'Gotham-thin' sans-serif;
+    font-size: 2vmax;
+  }
+  .desc{
+    font-size: 1.7vmax;
+  }
+  .imageText4{
+    font-size: 2vmax;
+  }
+}
+ 
+
+
+@media screen and (max-width: 700px) {
+.row{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+  .image{
+   width: 60vmax;
+   margin-top: 5vmax;
+ } 
+ 
+ .heading{
+   font-size: 2.5vmax;
+ }
+ .desc{
+  font-size: 1.9vmax;
+ }
+ .imageText4{
+  font-size: 3vmax;
+  bottom: -61%;
+ 
+}
+}
+
+
+
+@media screen and (max-width: 327px) {
+  
+    .image{
+     width: 50vmax;
+     margin-top: 5vmax;
+   } 
+   .heading{
+    font-size: 3vmax;
+   }
+   desc{
+    font-size: 2.5vmax;
+   }
+   
+  }
+  
